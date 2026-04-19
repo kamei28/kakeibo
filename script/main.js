@@ -19,7 +19,7 @@ async function sendData(payload) {
             },
             body: JSON.stringify(payload)
         });
-        alert("家計簿にコミットしました！");
+        // alert("家計簿にコミットしました！");
         reload();
     } catch (error) {
         alert("コミットに失敗しました。\nデータを確認して再度試してください。");
