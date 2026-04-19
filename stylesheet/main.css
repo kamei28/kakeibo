@@ -31,7 +31,7 @@ html, body {
     white-space: nowrap;
     gap: 20px;
     padding: 0;
-    margin: 0;
+    margin: 5px 0;
     font-weight: 600;
     overflow-x: auto;
     color: white;
