@@ -17,5 +17,5 @@ document.getElementById("save-data").addEventListener("click", () => {
     
     // localStorageに保存
     localStorage.setItem(data_id, JSON.stringify({ gas_url: gas, gss_url: gss }));
-    location.reload();
+    location.href = "./index.html";
 });
