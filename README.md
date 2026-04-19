@@ -2,4 +2,6 @@
 
 ---  
 
-URL: https://kakei.netlify.app/
+URL: https://kakei.netlify.app/  
+  
+[SETUP.md](./spreadsheet/SETUP.md)  
