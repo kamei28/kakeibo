@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>家計簿 - 入力フォーム</title>
+        <link rel="icon" type="image/png" href="./img/icon.png">
+        <link rel="stylesheet" href="./stylesheet/main.css">
+        <link rel="stylesheet" href="./stylesheet/form.css">
+        <script type="text/javascript" src="./script/main.js" defer></script>
+        <script type="text/javascript" src="./script/load.js" defer></script>
+    </head>
+    <body class="container">
+        <header class="top-bar">
+            <h1 class="page-name">家計簿入力</h1>
+            <ul class="relation-link">
+                <li id="main-app" class="hidden">家計簿アプリ</li>
+                <li id="settings">家計簿設定</li>
+                <li id="data-link">集計データ</li>
+                <li id="tech-link">技術リンク</li>
+            </ul>
+        </header>
+
+        <main class="loading-now">
+            <img class="loading-img" src="./img/loading.gif" width="250">
+            <h2>Loading Now...</h2>
+            <noscript>
+                <h3 class="noscript">このアプリを使用するにはJavaScriptを有効化してください。</h3>
+            </noscript>
+            <div>データを同期しています。しばらくお待ちください。</div>
+        </main>
+
+        <main class="main-content hidden">
+            <ul class="subtitle" id="money-info">
+                <li class="money-exp">今月の消費金額は <span id="used-money">----</span> 円です。</li>
+                <li class="notice" id="notice">なるべく節約しましょう！</li>
+            </ul>
+
+            <div class="space"></div>
+            
+            <h3 class="subtitle">家計簿登録</h3>
+            <ul id="accbook-form" method="POST">
+                <li class="input-date">
+                    <label for="today-acc">日　付<span class="required">*</span></label>
+                    <input type="date" id="today-acc">
+                </li>
+                <li class="input-shop-name">
+                    <label for="shop-name">店舗名<span class="required">*</span></label>
+                    <input type="text" id="shop-name">
+                </li>
+                <li class="select-thing-category">
+                    <label for="thing-category">種　類<span class="required">*</span></label>
+                    <select id="thing-category">
+                        <option>食品類</option>
+                        <option>日用品・小道具</option>
+                        <option>文房具</option>
+                        <option>本</option>
+                        <option>衣服類</option>
+                        <option>電子機器・家電</option>
+                        <option>その他</option>
+                    </select>
+                </li>
+                <li class="input-amount">
+                    <label for="amount">金　額<span class="required">*</span></label>
+                    <input type="number" id="amount">
+                </li>
+                <li class="button-submit">
+                    <input type="button" id="acc-submit" value="会計登録">
+                </li>
+            </ul>
+
+            <div class="space"></div>
+
+            <ul class="subtitle" id="money-info">
+                <li class="money-exp">現在の所持金額は <span id="now-money">----</span> 円です。</li>
+                <li class="notice">5,000円以下で現金引き出しを推奨します。</li>
+            </ul>
+
+            <div class="space"></div>
+
+            <h3 class="subtitle">入金登録</h3>
+            <ul id="accbook-form">
+                <li class="input-date">
+                    <label for="today-amount">日　付<span class="required">*</span></label>
+                    <input type="date" id="today-amount">
+                </li>
+                <li class="in-money">
+                    <label for="add-amount">登録額<span class="required">*</span></label>
+                    <input type="number" id="add-amount">
+                </li>
+                <li class="button-submit">
+                    <input type="button" id="money-submit" value="入金登録">
+                </li>
+            </ul>
+        </main>
+
+        <footer class="bottom-bar">
+            <!-- <ul class="tech-link">
+                <li>GoogleAppScript</li>
+                <li>GitHub</li>
+            </ul> -->
+            <div class="copyright">Copyright © 2026 kamei28. All Rights Reserved.</div>
+        </footer>
+    </body>
+</html>

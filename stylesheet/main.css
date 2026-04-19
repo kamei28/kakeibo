@@ -1,0 +1,116 @@
+* {
+    font-family: "Yu Gothic", "游ゴシック", YuGothic, sans-serif;
+    box-sizing: border-box;
+}
+html, body {
+    padding: 0;
+    margin: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header UI */
+.top-bar {
+    width: 100%;
+    background: #2ca9e1;
+    padding: 5px 30px;
+    user-select: none;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #808080;
+    z-index: 1;
+    cursor: auto;
+}
+.relation-link {
+    list-style: none;
+    display: flex;
+    width: fit-content;
+    white-space: nowrap;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    overflow-x: auto;
+    color: white;
+}
+.relation-link li {
+    cursor: pointer;
+    /* text-decoration: underline; */
+}
+.relation-link li:hover {
+    color: #1e4294;
+    transition: all 0.2s;
+}
+.page-name {
+    width: fit-content;
+    margin: 0;
+    color: black;
+}
+
+/* Main Edge UI */
+.loading-now, .main-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 50%;
+    margin: 40px auto 5px;
+    animation: fadeIn 0.5s forwards;
+}
+.hidden {
+    display: none;
+}
+.loading-img {
+    margin: 0 auto;
+}
+.noscript {
+    color: red;
+    text-decoration: underline;
+    margin: 0;
+}
+
+/* Footer UI */
+.bottom-bar {
+    width: 100%;
+    text-align: center;
+    padding: 2px;
+    font-size: small;
+    color: white;
+    background: #1e4294;
+    /* position: sticky; */
+    /* bottom: 0; */
+}
+.copyright {
+    font-size: 0.9em;
+}
+.tech-link {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0 0 5px;
+    font-weight: 600;
+}
+.tech-link li {
+    cursor: pointer;
+}
+ul.tech-link li:hover {
+    color: #95949a;
+    transition: all 0.2s;
+}
+@media screen and (max-width: 350px) {
+    .top-bar { padding: 5px }
+}
+@media screen and (max-width: 650px) {
+    .top-bar { padding: 5px 10px }
+    .loading-now, .main-content {
+        width: 94%;
+    }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
