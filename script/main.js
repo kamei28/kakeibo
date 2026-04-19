@@ -68,5 +68,5 @@ document.getElementById("data-link").addEventListener("click", () =>
 );
 // 技術リンク
 document.getElementById("tech-link").addEventListener("click", () =>
-    open("https://script.google.com/u/0/home/projects/1UqyijbOn558zZ8KZrePUpEg97JVC7AU9zG6IPRCzvApdy0MEeoKTtbBs/edit")
+    open("https://pastebin.com/1R7P9XzU")
 );
