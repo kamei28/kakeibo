@@ -45,7 +45,7 @@ const reload = async () => {
     document.querySelector("#today-acc").value = today;
     document.querySelector("#today-amount").value = today;
 
-    if (Number(data.balance) <= 5000) {
+    if (Number(data.balance.replaceAll(",", "")) <= 5000) {
         document.querySelector("#notice").innerText = "推奨：5,000円を引き出してください。";
     }
 
